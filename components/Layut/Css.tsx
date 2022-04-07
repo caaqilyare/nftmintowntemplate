@@ -17,15 +17,17 @@ function Css() {
             href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Roboto:wght@400;700&display=swap"
             rel="stylesheet"
           />
-          <link rel="stylesheet" href="assets/css/all.min.css" />
-          <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-          <link rel="stylesheet" href="assets/plugins/swiper/swiper-bundle.min.css" />
+          <link rel="stylesheet" href="/assets/css/all.min.css" />
+          <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+          <link rel="stylesheet" href="/assets/plugins/swiper/swiper-bundle.min.css" />
           <link
             rel="stylesheet"
-            href="assets/plugins/magnific-popup/magnific-popup.css"
+            href="/assets/plugins/magnific-popup/magnific-popup.css"
           />
-          <link rel="stylesheet" href="assets/css/style.css" />
-          <link rel="stylesheet" href="assets/css/custom.css" />
+          <link rel="stylesheet" href="/assets/plugins/nice-select/nice-select.css" />
+
+          <link rel="stylesheet" href="/assets/css/style.css" />
+          <link rel="stylesheet" href="/assets/css/custom.css" />
       </Head>
     </div>
   )

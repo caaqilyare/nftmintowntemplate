@@ -4,8 +4,13 @@ import Image from 'next/image'
 import Css from '../components/Layut/Css'
 import Script from 'next/script'
 import Link from 'next/link'
+import { useAddress, useDisconnect, useMetamask ,useNFTDrop } from "@thirdweb-dev/react";
 
 const Home: NextPage = () => {
+    // Auth token
+    const connectWithMetamask = useMetamask();
+    const address = useAddress();
+    const disconnect = useDisconnect();
   return (
       <>
       <Css />
@@ -19,70 +24,39 @@ const Home: NextPage = () => {
                 <div className="header-inner position-relative">
                   <div className="row align-items-center">
                     <div className="col-lg-4 col-md-6 col-sm-9 col-6">
-                      <div className="d-flex align-items-center">
+                      <div className="d-flex align-items-center">  <Link href="/">
                         <div className="logo">
-                          <a href="index-2.html">
-                            <img src="assets/img/logo-svg.png" className="main-logo" alt="" />{" "}
-                          </a>
-                        </div>
+                       
+                            <img src="/assets/img/logo-svg.png" className="main-logo" alt="" />{" "}
+                          
+                        </div></Link>
                       </div>
                     </div>
                     <div className="col-lg-8 col-md-6 col-sm-3 col-6 d-flex align-items-center justify-content-end position-static">
                       <div className="nav-wrapper d-flex align-items-center">
                         <div className="nav-wrap-inner">
+                        {address && (
+                            <p className='text-center text-sm text-amber-600'>
+                            You're logged in with wallet {address.substring(0,5)}.... {address.substring(address.length - 5)}
+                            </p>
+                            )} 
                         </div>
-                        <div className="d-none d-md-flex align-items-center ms-4">
-                          <a href="create.html" className="btn">
-                            {" "}
-                            Connect Metamask
-                          </a>
-                          <div className="dropdown ml-10">
-                            <a
-                              href="#"
-                              className="user-avatar dropdown-toggle"
-                              data-bs-toggle="dropdown"
-                            >
-                              <img src="assets/img/media/user.png" alt="" />{" "}
-                              <span className="user-status">
-                                <img
-                                  src="assets/img/icons/check.svg"
-                                  className="svg"
-                                  alt=""
-                                />
-                              </span>
-                            </a>
-                            <ul className="dropdown-menu">
-                              <li>
-                                <a className="dropdown-item" href="profile.html">
-                                  <img src="assets/img/icons/profile.svg" alt="" />{" "}
-                                  Profile
-                                </a>
-                              </li>
-                              <li>
-                                <a className="dropdown-item" href="create.html">
-                                  <img src="assets/img/icons/create.svg" alt="" /> Create
-                                </a>
-                              </li>
-                              <li>
-                                <a className="dropdown-item" href="collection.html">
-                                  <img src="assets/img/icons/collection.svg" alt="" />{" "}
-                                  Collection
-                                </a>
-                              </li>
-                              <li>
-                                <a className="dropdown-item" href="wallet.html">
-                                  <img src="assets/img/icons/wallet.svg" alt="" /> Wallet
-                                </a>
-                              </li>
-                              <li>
-                                <a className="dropdown-item" href="explore.html">
-                                  <img src="assets/img/icons/explore.svg" alt="" />{" "}
-                                  Explore
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
+                        {address ? 
+                        <div onClick={() => (address ? disconnect() : connectWithMetamask())} className="d-none d-md-flex align-items-center ms-4">
+                        <button className="btn">
+                          {" "}
+                          Sign out
+                        </button>
                         </div>
+                       : 
+                       <div onClick={() => (address ? disconnect() : connectWithMetamask())} className="d-none d-md-flex align-items-center ms-4">
+                        <button className="btn">
+                          {" "}
+                          Connect Metamask
+                        </button>
+                     </div> 
+                      }
+                       
                       </div>
                     </div>
                   </div>
