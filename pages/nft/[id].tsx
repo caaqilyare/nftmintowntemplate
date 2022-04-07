@@ -35,11 +35,10 @@ function NFTDrop() {
                         </div></Link>
                       </div>
                     </div>
-                    <div className="col-lg-8 col-md-6 col-sm-3 col-6 d-flex align-items-center justify-content-end position-static">
-                      <div className="nav-wrapper d-flex align-items-center">
-                        <div className="nav-wrap-inner">
-                        {address && (
-                            <p className='text-center text-sm text-amber-600'>
+                    <div className="col-lg-8 col-md-12 col-sm-12 col-6 d-flex align-items-center justify-content-end">
+                    <div className="align-items-center">
+                      {address && (
+                            <p className='text-center text-sm text-yellow-600'>
                             You're logged in with wallet {address.substring(0,5)}.... {address.substring(address.length - 5)}
                             </p>
                             )} 
@@ -60,7 +59,6 @@ function NFTDrop() {
                      </div> 
                       }
                        
-                      </div>
                     </div>
                   </div>
                 </div>
