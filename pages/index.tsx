@@ -124,7 +124,7 @@ const Home: NextPage = () => {
                       <div className="product-top">
                         <h5>Colorful Abstract Painting</h5>
                         <div className="d-flex justify-content-between">
-                          <h6>Tsuki #8279</h6>
+                          <h6>Tales of Tsuki is a collection of 9,999 beautiful, brave Waifus and their </h6>
                           <h6>Tsuki #8279</h6>
                         </div>
                       </div>
@@ -148,7 +148,7 @@ const Home: NextPage = () => {
                 <div className="row">
                   <div className="col-12">
                     <div className="copyright-content text-center text-white">
-                      © 2021 - <span className="currentYear">2022</span>{" "}
+                      © 2022 - <span className="currentYear"></span>{" "}
                       <a className="text-white">
                         Munasar Abuukar
                       </a>{" "}
