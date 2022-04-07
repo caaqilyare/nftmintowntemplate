@@ -1,85 +1,189 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Css from '../components/Layut/Css'
+import Script from 'next/script'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+      <>
+      <Css />
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+            <title>Mint NFT</title>
+        </Head>
+        <body data-bg-img="assets/img/bg/page-bg.png">
+        <header className="header">
+            <div className="header-main love-sticky">
+              <div className="container">
+                <div className="header-inner position-relative">
+                  <div className="row align-items-center">
+                    <div className="col-lg-4 col-md-6 col-sm-9 col-6">
+                      <div className="d-flex align-items-center">
+                        <div className="logo">
+                          <a href="index-2.html">
+                            <img src="assets/img/logo-svg.png" className="main-logo" alt="" />{" "}
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-8 col-md-6 col-sm-3 col-6 d-flex align-items-center justify-content-end position-static">
+                      <div className="nav-wrapper d-flex align-items-center">
+                        <div className="nav-wrap-inner">
+                        </div>
+                        <div className="d-none d-md-flex align-items-center ms-4">
+                          <a href="create.html" className="btn">
+                            {" "}
+                            Connect Metamask
+                          </a>
+                          <div className="dropdown ml-10">
+                            <a
+                              href="#"
+                              className="user-avatar dropdown-toggle"
+                              data-bs-toggle="dropdown"
+                            >
+                              <img src="assets/img/media/user.png" alt="" />{" "}
+                              <span className="user-status">
+                                <img
+                                  src="assets/img/icons/check.svg"
+                                  className="svg"
+                                  alt=""
+                                />
+                              </span>
+                            </a>
+                            <ul className="dropdown-menu">
+                              <li>
+                                <a className="dropdown-item" href="profile.html">
+                                  <img src="assets/img/icons/profile.svg" alt="" />{" "}
+                                  Profile
+                                </a>
+                              </li>
+                              <li>
+                                <a className="dropdown-item" href="create.html">
+                                  <img src="assets/img/icons/create.svg" alt="" /> Create
+                                </a>
+                              </li>
+                              <li>
+                                <a className="dropdown-item" href="collection.html">
+                                  <img src="assets/img/icons/collection.svg" alt="" />{" "}
+                                  Collection
+                                </a>
+                              </li>
+                              <li>
+                                <a className="dropdown-item" href="wallet.html">
+                                  <img src="assets/img/icons/wallet.svg" alt="" /> Wallet
+                                </a>
+                              </li>
+                              <li>
+                                <a className="dropdown-item" href="explore.html">
+                                  <img src="assets/img/icons/explore.svg" alt="" />{" "}
+                                  Explore
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </header>
+        <div className="banner ov-hidden">
+          <div id="particles" data-bg-img="assets/img/bg/banner-bg.png" />
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6">
+                <div className="banner-content text-white mt-xl-5 pt-xl-2 mb-5 mb-lg-0">
+                  <h1>
+                    Digital Collection &amp; Mint on <span>NFTs</span> Marketplace
+                  </h1>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="banner-img mb-60 mb-lg-0">
+                  <img src="assets/img/media/banner-img.png" alt="" />
+                  <div className="banner-img-content">
+                    <h2>Do a Portrait Painting Artwork!</h2>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
+        <section className="pt-120 pb-120">
+            <div className="container">
+              <div className="row">
+                <Link href="/nft/mintnft">  
+                <div className="col-lg-4 col-md-6">
+                  <div className="single-product mb-30">
+                    <img src="assets/img/product/product4.png" alt="" />
+                    <div className="product-content">
+                      <div className="product-top">
+                        <h5>Colorful Abstract Painting</h5>
+                        <div className="d-flex justify-content-between">
+                          <h6>Tsuki #8279</h6>
+                          <h6>Tsuki #8279</h6>
+                        </div>
+                      </div>
+                      <div className="product-bottom">
+                        <div className="button-group">
+                          <a href="#" className="btn btn-border wallet-react btn-sm">
+                            View more
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </Link>
+              </div>
+            </div>
+          </section>
+          <footer className="footer">
+            <div className="footer-bottom">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12">
+                    <div className="copyright-content text-center text-white">
+                      © 2021 - <span className="currentYear">2022</span>{" "}
+                      <a className="text-white">
+                        Munasar Abuukar
+                      </a>{" "}
+                      Networks, Inc. All Right Reserved.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </footer>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
+
+
+
+
+
+
+        <Script src="assets/js/jquery.min.js"></Script>
+        <Script src="assets/js/bootstrap.bundle.min.js"></Script>
+        <Script src="assets/plugins/particles/particles.min.js"></Script>
+        <Script src="assets/js/menu.min.js"></Script>
+        <Script src="assets/plugins/swiper/swiper-bundle.min.js"></Script>
+        <Script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></Script>
+        <Script src="assets/plugins/countdown/countdown.min.js"></Script>
+        <Script src="assets/plugins/nice-select/jquery.nice-select.min.js"></Script>
+        <Script src="assets/plugins/Isotope/isotope.pkgd.js"></Script>
+        <Script src="assets/plugins/counterup/waypoints.min.js"></Script>
+        <Script src="assets/plugins/counterup/jquery.counterup.min.js"></Script>
+        <Script src="assets/js/main.js"></Script>
+        <Script src="assets/js/custom.js"></Script>
+        </body>
+
+
+       
+</>
   )
 }
 
